@@ -1,0 +1,24 @@
+# Ignorar arquivos temporários
+*.log
+*.tmp
+*.swp
+
+# Ignorar diretórios temporários
+temp/
+tmp/
+node_modules/
+
+# Ignorar arquivos específicos de IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Ignorar arquivos de banco de dados locais (se houver)
+*.sql
+
+# Ignorar arquivos gerados por builds (se houver)
+build/
+dist/
