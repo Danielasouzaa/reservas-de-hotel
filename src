@@ -1,0 +1,23 @@
+CREATE TABLE Hospedes (
+    id_hospede INT PRIMARY KEY,
+    nome VARCHAR(100),
+    telefone VARCHAR(15),
+    email VARCHAR(100)
+);
+
+CREATE TABLE Quartos (
+    id_quarto INT PRIMARY KEY,
+    numero INT,
+    tipo VARCHAR(50),
+    preco DECIMAL(10, 2)
+);
+
+CREATE TABLE Reservas (
+    id_reserva INT PRIMARY KEY,
+    id_hospede INT,
+    id_quarto INT,
+    data_checkin DATE,
+    data_checkout DATE,
+    FOREIGN KEY (id_hospede) REFERENCES Hospedes(id_hospede),
+    FOREIGN KEY (id_quarto) REFERENCES Quartos(id_quarto)
+);
